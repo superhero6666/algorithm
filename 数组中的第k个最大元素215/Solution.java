@@ -29,11 +29,15 @@ public class Solution {
                 nums[j] = temp;
             }
         }
-        if(i < k){
-            return maxK(nums, k, i+1, right);
+        if(j < k){
+            return maxK(nums, k, j+1, right);
         }else{
-            return maxK(nums, k, left, i);
+            return maxK(nums, k, left, j);
         }
+    }
+    public static void main(String[] args) {
+        int[] nums = {99,99};
+        System.out.println(new Solution().findKthLargest(nums, 1));
     }
 }
     //超时
